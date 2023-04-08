@@ -12,6 +12,7 @@ function Home() {
 
     const logout = () => {
         fetch(`${HANKO_API}/logout`, {
+            method: "POST",
             credentials: "include",
         }).then(() => {
             navigate("/", {replace: true});
