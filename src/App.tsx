@@ -1,15 +1,13 @@
-import Routes from "./routes";
-import ToastStore from "@/stores/toastStore";
-import {Toast} from "@/components/Toast";
+import Routes from "@/routes";
+import styles from "@/App.module.css";
 
 function App() {
 
     return (
-        <ToastStore>
-            <Toast/>
+        <div className={styles.content}>
             <Routes/>
-        </ToastStore>
-    )
+        </div>
+    );
 }
 
 export default App
