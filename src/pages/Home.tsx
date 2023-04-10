@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import UserService from "@/services/user";
 import {useNavigate} from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import ConfigService from "@/services/config";
 import EmailService from "@/services/email";
 import {Emails, WebauthnCredentials} from "@teamhanko/hanko-frontend-sdk";
 import WebauthService from "@/services/webauth";
@@ -44,7 +43,7 @@ function Home() {
                 </ul>
                 <ul className="menu menu-compact lg:menu-normal bg-base-300 w-56 p-2 rounded-box">
                     <li className="menu-title">
-                        <span>Passcodes</span>
+                        <span>Passkeys</span>
                     </li>
                     {credentials.map(credential => <li key={credential.id}><a>PASSKEY-{credential.public_key.substring(0, 5)}</a></li>)}
                 </ul>
